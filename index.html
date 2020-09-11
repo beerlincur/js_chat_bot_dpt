@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="JS.ChatBot has open-source, on DPLv4.2 LICENSE">
+    <meta name="keywords" content="ChatBot, Чат-Бот">
+    <meta name="author" content="DartPower">
+    <link href="css/ChatBot.css" type="text/css" rel="stylesheet">
+    <link href="css/buttons.css" type="text/css" rel="stylesheet">
+    <link href="css/layout.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $('textarea')
+      .focus(function() { 
+      $(this).css("background", "none"); 
+      })
+      .blur(function() { 
+      if ($(this)[0].value == '') { 
+      $(this).css("background", "url(images/stripe.png) center center repeat"); 
+      } 
+      });
+    </script>
+    <title>JavaScript Чат-Бот [Random Phrases Test]</title>
+    <!--[if IE]>
+    <style type="text/css">
+      .color-block {
+      background:transparent;
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000050,endColorstr=#99000050);
+      zoom: 1;
+      }
+    </style>
+    <![endif]-->
+  </head>
+  <body>
+    <noscript>
+      <meta http-equiv="refresh" content="0; URL="http://browsehappy.com">
+    </noscript>
+    <div class="header-cont">
+      <div id="container">
+      </div>
+	  <hr>
+    </div>
+    <div class="content">
+      <center>
+        <b>Chat-Bot</b></br>
+        <textarea rows="20" cols="64" id="phrase" readonly></textarea></br>
+        <input id="you" type="text" size="65"><a onclick="say();" href="#" class="bttn icon comment">Сказать</a></br>
+      </center>
+	  <hr>
+      <center>
+        <b>Console</b></br>
+        <textarea rows="20" cols="64" id="chat-log" readonly></textarea></br>
+      </center>
+    </div>
+    <hr>
+  <script src="js/ChatBot.JS" type="text/javascript" ></script>
+  </body>
+</html>
